@@ -1,5 +1,6 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
+const dbConnect = require('./config/db');
 // require('dotenv').config();
 
 const port = process.env.PORT || 7000;
@@ -50,6 +51,8 @@ let notes = [
 
 
 const app = express();
+
+dbConnect();
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
