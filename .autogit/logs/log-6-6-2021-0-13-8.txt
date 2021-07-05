@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jul 06 2021 00:13:08 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* package-lock.json
+* package.json
+* resolvers/index.js
+* resolvers/mutations.js
+* schema.js
+
+
+Created files:
+* .autogit/logs/log-5-6-2021-23-42-50.txt
+
+
+Deleted files:
+
+
+Renamed files:
