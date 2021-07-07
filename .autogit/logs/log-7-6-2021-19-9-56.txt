@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jul 07 2021 19:09:56 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* models/index.js
+* package-lock.json
+* package.json
+* schema.js
+
+
+Created files:
+* models/user.js
+
+
+Deleted files:
+
+
+Renamed files:
