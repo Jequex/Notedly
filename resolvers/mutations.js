@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const {
     AuthenticationError,
@@ -7,26 +8,49 @@ const {
 const gravatar = require('../config/gravatar');
 
 const {JWT_SECRET} = require('../config/data');
+const { notes } = require('./query');
 
 
 const Mutation = {
-    newNote: async (parent, args, { models }) => {
-        let noteValue = {
+    newNote: async (parent, args, { models, user }) => {
+        if (!user) {
+            throw new AuthenticationError('You must be signed in to create a note');
+        }
+        
+        await models.Note.create({
             content: args.content,
-            author: 'Jequex'
-        };
-        await models.Note.create(noteValue);
+            author: mongoose.Types.ObjectId(user.id)
+        });
         return models.Note.find();
     },
-    deleteNote: async (parent, { id }, { models }) => {
+    deleteNote: async (parent, { id }, { models, user }) => {
+        if (!user) {
+            throw new AuthenticationError('You need to sign in');
+        }
+
+        const note = models.Note.findById(id);
+
+        if (note && String(notes.author) !== user.id) {
+            throw new ForbiddenError("You don't have the neccessary authorization");
+        }
+        
         try {
-            await models.Note.findOneAndRemove({ _id: id });
+            await note.remove();
             return true;
         } catch(err) {
             return false;
         }
     },
-    updateNote: async (parent, { id, content }, { models }) => {
+    updateNote: async (parent, { id, content }, { models, user }) => {
+        if (!user) {
+            throw new AuthenticationError('You need to sign in');
+        }
+
+        const note = models.Note.findById({ id });
+        if(note && String(note.author) !== user.id){
+            throw new ForbiddenError("you don't have the neccessary authentication")
+        }
+
         try {
             return await models.Note.findOneAndUpdate(
                 { _id: id },
