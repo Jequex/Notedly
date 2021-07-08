@@ -56,7 +56,7 @@ const Mutation = {
             throw new Error("Error Creating Account");
         }
     },
-    signIn: async (parent, { email, password, usernam }, { models }) => {
+    signIn: async (parent, { email, password, username }, { models }) => {
         if (email) {
             email.trim().toLowerCase();
         }

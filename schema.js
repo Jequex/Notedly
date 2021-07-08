@@ -14,7 +14,6 @@ const typeDefs = gql`
     type User {
         id: ID!
         username: String!
-        password: String!
         email: String!
         avatar: String!
         notes: [Note!]!
@@ -29,8 +28,8 @@ const typeDefs = gql`
         newNote(content: String!) : [ Note! ]!
         deleteNote(id: ID!) : Boolean!
         updateNote(id: ID!, content: String!) : [ Note! ]!
-        signUp(username: String!, email: String!, password: String!)
-        signIn(username: String!, email: String!, password: String!)
+        signUp(username: String!, email: String!, password: String!) : String!
+        signIn(username: String!, email: String!, password: String!) : String!
     }
 `;
 

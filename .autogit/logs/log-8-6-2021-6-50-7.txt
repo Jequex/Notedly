@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jul 08 2021 06:50:07 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* resolvers/mutations.js
+* server.js
+
+
+Created files:
+* config/data.js
+* config/gravatar.js
+
+
+Deleted files:
+
+
+Renamed files:

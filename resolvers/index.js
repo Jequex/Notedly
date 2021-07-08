@@ -1,10 +1,10 @@
 const Query = require('./query');
-const Mutations = require('./mutations');
+const Mutation = require('./mutations');
 const { GraphQLDateTime } = require('graphql-iso-date');
 
 const resolvers = {
     Query,
-    Mutations,
+    Mutation,
     DateTime: GraphQLDateTime
 };
 
