@@ -5,6 +5,8 @@ const typeDefs = gql`
 
     type Note {
         id: ID!
+        favoriteCount: Int!
+        favoritedBy: [User!]
         content: String!
         author: String!
         createdAt: DateTime!
@@ -17,6 +19,7 @@ const typeDefs = gql`
         email: String!
         avatar: String!
         notes: [Note!]!
+        favorites: [Note!]!
     }
 
     type Query {
@@ -33,6 +36,7 @@ const typeDefs = gql`
         updateNote(id: ID!, content: String!) : [ Note! ]!
         signUp(username: String!, email: String!, password: String!) : String!
         signIn(username: String!, email: String!, password: String!) : String!
+        toggleFavorite(id: ID!): Note!
     }
 `;
 

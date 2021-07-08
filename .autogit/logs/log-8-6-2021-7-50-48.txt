@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jul 08 2021 07:50:48 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* models/note.js
+* resolvers/mutations.js
+* resolvers/query.js
+* schema.js
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
