@@ -3,15 +3,27 @@ const { ApolloServer } = require('apollo-server-express');
 const dbConnect = require('./config/db');
 const typeDefs = require('./schema');
 const resolvers = require('./resolvers');
+const jwt = require('jsonwebtoken');
 const models = require('./models');
+const { PORT, JWT_SECRET } = require('./config/data');
 // require('dotenv').config();
 
-const port = process.env.PORT || 7000;
+const port = PORT || 7000;
 
 
 const app = express();
 
 dbConnect();
+
+const getUser = token => {
+    if (token) {
+        try {
+            return jwt.verify(token, JWT_SECRET);
+        } catch (err) {
+            throw new Error('Session Invalid');
+        }
+    }
+}
 
 const server = new ApolloServer({
     typeDefs,
