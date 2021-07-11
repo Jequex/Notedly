@@ -1,0 +1,33 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jul 11 2021 17:42:39 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* frontend/package.json
+
+
+Created files:
+* .autogit/logs/log-11-6-2021-17-12-16.txt
+* frontend/.gitignore
+* frontend/README.md
+* frontend/package-lock.json
+* frontend/public/favicon.ico
+* frontend/public/index.html
+* frontend/public/logo192.png
+* frontend/public/logo512.png
+* frontend/public/manifest.json
+* frontend/public/robots.txt
+* frontend/src/App.css
+* frontend/src/App.js
+* frontend/src/App.test.js
+* frontend/src/index.css
+* frontend/src/index.js
+* frontend/src/logo.svg
+* frontend/src/reportWebVitals.js
+* frontend/src/setupTests.js
+
+
+Deleted files:
+
+
+Renamed files:
