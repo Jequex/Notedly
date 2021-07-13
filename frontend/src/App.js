@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
 // import './App.css';
 // import Layout from './components/Layout';
+import React from 'react';
 import Pages from './pages';
 
 const App = () => {
   return (
-    <Pages />
+    <React.Fragment>
+      <Pages />
+    </React.Fragment>
   )
  };
 

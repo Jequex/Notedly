@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <Router>
+        <React.Fragment>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-        </Router>
+        </React.Fragment>
     )
 }
 
