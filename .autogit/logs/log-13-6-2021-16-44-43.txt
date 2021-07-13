@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jul 13 2021 16:44:43 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-13-6-2021-16-14-27.txt
+
+
+Deleted files:
+
+
+Renamed files:
