@@ -1,9 +1,12 @@
 // import logo from './logo.svg';
-import './App.css';
-import Layout from './components/Layout';
+// import './App.css';
+// import Layout from './components/Layout';
+import Pages from './pages';
 
-function App() {
-  return <Layout />;
-}
+const App = () => {
+  return (
+    <Pages />
+  )
+ };
 
 export default App;

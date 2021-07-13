@@ -1,16 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Layout from '../components/Layout';
 import Home from './Home';
+import About from './About';
 
 const Pages = () => {
     return (
-        <Router>
-            <Layout>
-                <Route exact path="/" component={Home} />
-            </Layout>
-        </Router>
+        <Layout>
+            <Router>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                </Switch>
+            </Router>
+        </Layout>
     )
 }
 

@@ -1,0 +1,22 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jul 13 2021 10:59:51 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* frontend/package-lock.json
+* frontend/package.json
+* frontend/src/App.js
+
+
+Created files:
+* frontend/src/components/Header.js
+* frontend/src/components/Layout.js
+* frontend/src/components/Navigation.js
+* frontend/src/pages/Home.js
+* frontend/src/pages/Index.js
+
+
+Deleted files:
+
+
+Renamed files:
