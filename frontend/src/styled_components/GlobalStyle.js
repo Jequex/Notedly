@@ -10,7 +10,9 @@ ${normalize}
 }
 
 body, html {
-    height: 100%,
-    width
+    height: 100%;
+    width: 90%;
 }
+
+
 `;
