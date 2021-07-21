@@ -1,19 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Layout from '../components/Layout';
 import Home from './Home';
 import About from './About';
+import Mynotes from './Mynotes';
+import Favorites from './Favorites';
 
 const Pages = () => {
     return (
         <Layout>
-            <Router>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                </Switch>
-            </Router>
+            <Switch>
+                <Route exact path="/"> <Home /> </Route>
+                <Route path="/about"> <About /> </Route>
+                <Route path="/mynotes"><Mynotes /></Route>
+                <Route path="/favorites"><Favorites /></Route>
+            </Switch>
         </Layout>
     )
 }
