@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jul 21 2021 12:30:28 GMT+0100 (West Africa Standard Time)
+------------------------------------------------------
+
+Modified files:
+* frontend/package-lock.json
+* frontend/package.json
+* frontend/src/pages/Index.js
+* package-lock.json
+* package.json
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
